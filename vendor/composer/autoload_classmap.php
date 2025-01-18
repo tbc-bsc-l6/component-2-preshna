@@ -21,7 +21,7 @@ return array(
     'App\\Http\\Controllers\\GradeController' => $baseDir . '/app/Http/Controllers/GradeController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\ParentsController' => $baseDir . '/app/Http/Controllers/ParentsController.php',
-    'App\\Http\\Controllers\\RoleAssign' => $baseDir . '/app/Http/Controllers/RoleAssign.php',
+    'App\\Http\\Controllers\\RoleAssignController' => $baseDir . '/app/Http/Controllers/RoleAssignController.php',
     'App\\Http\\Controllers\\RolePermissionController' => $baseDir . '/app/Http/Controllers/RolePermissionController.php',
     'App\\Http\\Controllers\\StudentController' => $baseDir . '/app/Http/Controllers/StudentController.php',
     'App\\Http\\Controllers\\SubjectController' => $baseDir . '/app/Http/Controllers/SubjectController.php',
