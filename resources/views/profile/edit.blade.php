@@ -14,7 +14,7 @@
         
             </div>
         </div>
-        <!-- Log on to codeastro.com for more projects -->
+        
         <div class="mt-8 bg-white rounded">
             <form action="{{ route('profile.update') }}" method="POST" class="w-full max-w-2xl mx-auto px-6 py-12 flex flex-wrap justify-between" enctype="multipart/form-data">
                 @csrf

@@ -11,7 +11,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     
 </head>
-<!-- Log on to codeastro.com for more projects -->
+
 <body class="bg-gray-100 font-sans antialiased">
     <div id="app">
 
