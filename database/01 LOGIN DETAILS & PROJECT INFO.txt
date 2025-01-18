@@ -1,4 +1,4 @@
-**Log on to codeastro.com for more projects!***
+**Log on to sms.com for more projects!***
 
 
 **Developed by Priya Jain**
@@ -10,22 +10,22 @@
 ---Admin Login Details---
 
 Email   : admin@mail.com
-Password: codeastro.com
+Password: sms.com
 
 ---Teacher Login Details---
 
 Email   : teacher@mail.com
-Password: codeastro.com
+Password: sms.com
 
 ---Student Login Details---
 
 Email   : student@mail.com
-Password: codeastro.com
+Password: sms.com
 
 ---Parents Login Details---
 
 Email   : parent@mail.com
-Password: codeastro.com
+Password: sms.com
 
 **Check the Website's Post Page for all the Installation Instructions**
 

@@ -88,6 +88,6 @@
                 @endforeach
             </div>   
         </div>
-        <!-- Log on o codeastro.com for more projects -->
+        <!-- Log on o sms.com for more projects -->
     </div>
 @endsection
