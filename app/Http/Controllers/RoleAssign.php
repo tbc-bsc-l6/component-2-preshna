@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Hash;
 
-class RoleAssignController extends Controller
+class RoleAssign extends Controller
 {
 
     public function index()
