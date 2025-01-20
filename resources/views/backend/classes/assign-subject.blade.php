@@ -51,7 +51,7 @@
                 </div>
             </form>        
         </div>
-        <
+        
         <div class="w-full py-12">
             <h2 class="text-gray-700 uppercase font-bold my-2">Students</h2>
             <div class="flex items-center bg-gray-600">
