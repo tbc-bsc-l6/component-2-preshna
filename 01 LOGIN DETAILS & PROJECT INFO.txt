@@ -1,23 +1,26 @@
+
+
+
 ---Admin Login Details---
 
 Email   : admin@mail.com
-Password: sms.com
+Password: codeastro.com
 
 ---Teacher Login Details---
 
 Email   : teacher@mail.com
-Password: sms.com
+Password: codeastro.com
 
 ---Student Login Details---
 
 Email   : student@mail.com
-Password: sms.com
+Password: codeastro.com
 
 ---Parents Login Details---
 
 Email   : parent@mail.com
-Password: sms.com
+Password: codeastro.com
 
-
+**Check the Website's Post Page for all the Installation Instructions**
 
 

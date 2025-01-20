@@ -1,8 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,50 +17,50 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/profile', [App\Http\Controllers\HomeController::class, 'profile'])->name('profile');
-Route::get('/profile/edit', [App\Http\Controllers\HomeController::class, 'profileEdit'])->name('profile.edit');
-Route::put('/profile/update', [App\Http\Controllers\HomeController::class, 'profileUpdate'])->name('profile.update');
-Route::get('/profile/changepassword', [App\Http\Controllers\HomeController::class, 'changePasswordForm'])->name('profile.change.password');
-Route::post('/profile/changepassword', [App\Http\Controllers\HomeController::class, 'changePassword'])->name('profile.changepassword');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/profile', 'HomeController@profile')->name('profile');
+Route::get('/profile/edit', 'HomeController@profileEdit')->name('profile.edit');
+Route::put('/profile/update', 'HomeController@profileUpdate')->name('profile.update');
+Route::get('/profile/changepassword', 'HomeController@changePasswordForm')->name('profile.change.password');
+Route::post('/profile/changepassword', 'HomeController@changePassword')->name('profile.changepassword');
 
-// Routes for Admin
-Route::group(['middleware' => ['auth', 'role:Admin']], function () {
-    Route::get('/roles-permissions', [App\Http\Controllers\RolePermissionController::class, 'roles'])->name('roles-permissions');
-    Route::get('/role-create', [App\Http\Controllers\RolePermissionController::class, 'createRole'])->name('role.create');
-    Route::post('/role-store', [App\Http\Controllers\RolePermissionController::class, 'storeRole'])->name('role.store');
-    Route::get('/role-edit/{id}', [App\Http\Controllers\RolePermissionController::class, 'editRole'])->name('role.edit');
-    Route::put('/role-update/{id}', [App\Http\Controllers\RolePermissionController::class, 'updateRole'])->name('role.update');
+Route::group(['middleware' => ['auth','role:Admin']], function () 
+{
+    Route::get('/roles-permissions', 'RolePermissionController@roles')->name('roles-permissions');
+    Route::get('/role-create', 'RolePermissionController@createRole')->name('role.create');
+    Route::post('/role-store', 'RolePermissionController@storeRole')->name('role.store');
+    Route::get('/role-edit/{id}', 'RolePermissionController@editRole')->name('role.edit');
+    Route::put('/role-update/{id}', 'RolePermissionController@updateRole')->name('role.update');
 
-    Route::get('/permission-create', [App\Http\Controllers\RolePermissionController::class, 'createPermission'])->name('permission.create');
-    Route::post('/permission-store', [App\Http\Controllers\RolePermissionController::class, 'storePermission'])->name('permission.store');
-    Route::get('/permission-edit/{id}', [App\Http\Controllers\RolePermissionController::class, 'editPermission'])->name('permission.edit');
-    Route::put('/permission-update/{id}', [App\Http\Controllers\RolePermissionController::class, 'updatePermission'])->name('permission.update');
+    Route::get('/permission-create', 'RolePermissionController@createPermission')->name('permission.create');
+    Route::post('/permission-store', 'RolePermissionController@storePermission')->name('permission.store');
+    Route::get('/permission-edit/{id}', 'RolePermissionController@editPermission')->name('permission.edit');
+    Route::put('/permission-update/{id}', 'RolePermissionController@updatePermission')->name('permission.update');
 
-    Route::get('assign-subject-to-class/{id}', [App\Http\Controllers\GradeController::class, 'assignSubject'])->name('class.assign.subject');
-    Route::post('assign-subject-to-class/{id}', [App\Http\Controllers\GradeController::class, 'storeAssignedSubject'])->name('store.class.assign.subject');
+    Route::get('assign-subject-to-class/{id}', 'GradeController@assignSubject')->name('class.assign.subject');
+    Route::post('assign-subject-to-class/{id}', 'GradeController@storeAssignedSubject')->name('store.class.assign.subject');
 
-    Route::resource('assignrole', App\Http\Controllers\RoleAssignController::class);
-    Route::resource('classes', App\Http\Controllers\GradeController::class);
-    Route::resource('subject', App\Http\Controllers\SubjectController::class);
-    Route::resource('teacher', App\Http\Controllers\TeacherController::class);
-    Route::resource('parents', App\Http\Controllers\ParentsController::class);
-    Route::resource('student', App\Http\Controllers\StudentController::class);
-    Route::get('attendance', [App\Http\Controllers\AttendanceController::class, 'index'])->name('attendance.index');
+    Route::resource('assignrole', 'RoleAssign');
+    Route::resource('classes', 'GradeController');
+    Route::resource('subject', 'SubjectController');
+    Route::resource('teacher', 'TeacherController');
+    Route::resource('parents', 'ParentsController');
+    Route::resource('student', 'StudentController');
+    Route::get('attendance', 'AttendanceController@index')->name('attendance.index');
+
 });
 
-// Routes for Teacher
-Route::group(['middleware' => ['auth', 'role:Teacher']], function () {
-    Route::post('attendance', [App\Http\Controllers\AttendanceController::class, 'store'])->name('teacher.attendance.store');
-    Route::get('attendance-create/{classid}', [App\Http\Controllers\AttendanceController::class, 'createByTeacher'])->name('teacher.attendance.create');
+Route::group(['middleware' => ['auth','role:Teacher']], function () 
+{
+    Route::post('attendance', 'AttendanceController@store')->name('teacher.attendance.store');
+    Route::get('attendance-create/{classid}', 'AttendanceController@createByTeacher')->name('teacher.attendance.create');
 });
 
-// Routes for Parent
-Route::group(['middleware' => ['auth', 'role:Parent']], function () {
-    Route::get('attendance/{attendance}', [App\Http\Controllers\AttendanceController::class, 'show'])->name('attendance.show');
+Route::group(['middleware' => ['auth','role:Parent']], function () 
+{
+    Route::get('attendance/{attendance}', 'AttendanceController@show')->name('attendance.show');
 });
 
-// Routes for Student
-Route::group(['middleware' => ['auth', 'role:Student']], function () {
-    // Add student-specific routes here if needed
+Route::group(['middleware' => ['auth','role:Student']], function () {
+
 });

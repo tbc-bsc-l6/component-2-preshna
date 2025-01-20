@@ -4,7 +4,7 @@
     <div class="create">
 
         <div class="flex items-center justify-between mb-6">
-            <div>
+            <div><!-- Log on to codeastro.com for more projects -->
                 <h2 class="text-gray-700 uppercase font-bold">Attendance</h2>
             </div>
             <div class="flex flex-wrap items-center">
@@ -44,7 +44,7 @@
                     </div>
                 @endforeach
             </div>        
-        </div>
+        </div><!-- Log on to codeastro.com for more projects -->
 
     </div>
 @endsection

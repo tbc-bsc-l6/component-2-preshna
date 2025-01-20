@@ -51,4 +51,5 @@
             </div>
         @endforeach
     </div>
-</div> 
+</div> <!-- ./END PARENT -->
+<!-- Log on to codeastro.com for more projects -->

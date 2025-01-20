@@ -65,7 +65,7 @@ final class ErrorHandler
                 }
 
                 return false;
-            },
+            }
         );
 
         $result = $callable();
