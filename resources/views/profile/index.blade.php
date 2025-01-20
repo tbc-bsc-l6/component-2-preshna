@@ -13,7 +13,7 @@
                 </a>
             </div>
         </div>
-        <!-- Log on to codeastro.com for more projects -->
+        
         <div class="mt-8 bg-white rounded">
             <div class="w-full max-w-2xl mx-auto px-6 py-12 flex justify-between">
                 <div>

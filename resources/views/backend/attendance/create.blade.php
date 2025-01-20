@@ -60,7 +60,7 @@
                         </button>
                     </div>
                 </form>
-            </div><!-- Log on to codeastro.com for more projects -->  
+            </div>
         </div>
 
     </div>

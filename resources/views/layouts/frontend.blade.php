@@ -30,4 +30,3 @@
 
 </body>
 </html>
-<!-- Log on to codeastro.com for more projects -->
